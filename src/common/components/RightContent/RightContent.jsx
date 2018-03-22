@@ -14,7 +14,7 @@ export default class RightContent extends Component {
 		const RightContentStyle = {
 			width: '100%',
 			height: '100%',
-			paddingLeft: 128,
+			padding: '48px 3px 148px 148px',
 			boxSizing: 'border-box'
 		}
 

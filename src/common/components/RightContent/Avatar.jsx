@@ -22,15 +22,16 @@ export default class Avatar extends Component {
 					height: 32,
 					top: '50%',
 					left: '50%',
-					marginLeft: 28,
+					marginLeft: 48,
 					position: 'absolute',
 					transform: 'translate(-50%, -50%)',
 					display: 'inline-block',
 					background: '#555',
-					borderRadius: '50%'
+					borderRadius: '50%',
+					boxShadow: '0 0 2px #555'
 				}} />
 				<p style={{
-					marginLeft: 158,
+					marginLeft: 176,
 					lineHeight: 1
 				}}>6666</p>
 			</div>

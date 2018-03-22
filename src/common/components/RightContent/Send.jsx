@@ -31,10 +31,13 @@ export default class Send extends Component {
 				<textarea style={{
 					width: '100%',
 					height: 108,
-					padding: '8px 8px 8px 138px',
+					padding: '3px 3px 3px 143px',
 					resize: 'none',
-					boxSizing: 'border-box'
-				}}></textarea>
+					border: 'none',
+					boxSizing: 'border-box',
+					fontSize: 17,
+					letterSpacing: 0.38
+				}}>66cVS的sac6菜市场</textarea>
 			</div>
 		)
 	}
