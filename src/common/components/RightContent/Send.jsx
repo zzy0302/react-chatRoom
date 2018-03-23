@@ -2,7 +2,22 @@ import React, {Component} from 'react';
 
 export default class Send extends Component {
 	constructor(props) {
-		super(props)
+		super(props);
+		this.state = {
+			editMessage: ''
+		};
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleChange(event) {
+		this.setState({
+			editMessage: event.target.value
+		});
+	}
+	handleSubmit(event) {
+		console.log(this.state.editMessage);
+		event.preventDefault();
 	}
 
 	render() {
@@ -11,22 +26,21 @@ export default class Send extends Component {
 			right: 0,
 			bottom: 0,
 			position: 'fixed',
-			background: '#555',
-			borderTop: '2px solid #888',
+			boxShadow: '0 0 3px #555'
 		}
 
 		return (
-			<div style={SendContentStyle}>
+			<form onSubmit={this.handleSubmit} style={SendContentStyle}>
 				<div style={{
 					width: '100%',
 					height: 32,
-					background: '#8cfffb'
+					boxShadow: '0 0 3px #555'
 				}}>
-					<button style={{
+					<input type="submit" value="发送" style={{
 						width: 88,
 						height: '100%',
 						float: 'right'
-					}}>发送</button>
+					}} />
 				</div>
 				<textarea style={{
 					width: '100%',
@@ -37,8 +51,8 @@ export default class Send extends Component {
 					boxSizing: 'border-box',
 					fontSize: 17,
 					letterSpacing: 0.38
-				}}>66cVS的sac6菜市场</textarea>
-			</div>
+				}} onChange={this.handleChange} value={this.state.editMessage} placeholder={'请输入要发送的信息 ...'} />
+			</form>
 		)
 	}
 }

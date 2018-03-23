@@ -12,8 +12,8 @@ export default class Avatar extends Component {
 			top: 0,
 			right: 0,
 			position: 'absolute',
-			background: 'lightblue',
-			borderBottom: '2px solid #888',
+			// background: 'lightblue',
+			boxShadow: '0 0 3px #555'
 		}
 		return (
 			<div style={AvatarContentStyle}>
@@ -28,7 +28,7 @@ export default class Avatar extends Component {
 					display: 'inline-block',
 					background: '#555',
 					borderRadius: '50%',
-					boxShadow: '0 0 2px #555'
+					boxShadow: '0 0 2px #333'
 				}} />
 				<p style={{
 					marginLeft: 176,
